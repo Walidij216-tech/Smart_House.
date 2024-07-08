@@ -1,0 +1,17 @@
+{
+    "name": "temperature-humidity-monitoring",
+    "version": "1.0.0",
+    "description": "A Node.js application to monitor temperature and humidity using a digital sensor",
+    "main": "sensor.js",
+    "scripts": {
+      "start": "node sensor.js"
+    },
+    "dependencies": {
+      "node-dht-sensor": "^0.4.3",
+      "express": "^4.17.1",
+      "body-parser": "^1.19.0"
+    },
+    "author": "Votre Nom",
+    "license": "MIT"
+  }
+  

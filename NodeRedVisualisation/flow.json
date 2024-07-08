@@ -1,0 +1,84 @@
+[
+    {
+        "id": "e4c5e894.30b6f8",
+        "type": "inject",
+        "z": "98c32e6c.d9e078",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "10",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "5",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 160,
+        "wires": [
+            [
+                "e9e8db70.e86f6"
+            ]
+        ]
+    },
+    {
+        "id": "e9e8db70.e86f6",
+        "type": "function",
+        "z": "98c32e6c.d9e078",
+        "name": "Random Temperature",
+        "func": "msg.payload = {\n    temperature: Math.floor(Math.random() * (30 - 20 + 1)) + 20\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 350,
+        "y": 160,
+        "wires": [
+            [
+                "39e26e2d.71ea18",
+                "d42d6df2.c5dd18"
+            ]
+        ]
+    },
+    {
+        "id": "d42d6df2.c5dd18",
+        "type": "debug",
+        "z": "98c32e6c.d9e078",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 570,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "39e26e2d.71ea18",
+        "type": "ui_chart",
+        "z": "98c32e6c.d9e078",
+        "name": "",
+        "group": "a7a4a648.1c8688",
+        "order": 0,
+        "width": "0",
+        "height": "0",
+        "label": "Temperature Monitoring",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "y": 320,
+        "x": 590,
+        "wires": []
+    }
+]
+
+    
+    
